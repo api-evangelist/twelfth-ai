@@ -1,0 +1,19 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://twelfth.ai/docs/settings/ai-and-agents/api-keys
+sources:
+- https://twelfth.ai/docs/settings/ai-and-agents/api-keys
+- https://twelfth.ai/docs/signing-in
+- https://twelfth.ai/docs/getting-started/
+- https://twelfth.ai/docs/getting-started
+description: Authentication schemes for Twelfth AI
+schemes:
+- type: http-bearer
+  name: Authorization
+  evidence: Servers, scripts and automations authenticate to the Twelfth REST API with a bearer key .
+  location: header
+  header: Authorization
+  how_to_obtain: Owners and admins create and revoke workspace keys from Settings → AI & agents; the key is shown once when created.
+note: No OAuth2 or other authentication methods are documented on the provided pages.
+docs: https://twelfth.ai/docs/settings/ai-and-agents/api-keys

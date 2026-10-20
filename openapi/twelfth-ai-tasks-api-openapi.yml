@@ -1,0 +1,259 @@
+openapi: 3.2.0
+info:
+  title: Twelfth REST Tasks API
+  version: 1.0.0
+  description: 'A deliberately small resource API for server-side Twelfth integrations. It starts with workspace identity and current task reads; new resources are added only after their contracts and permissions are ready.
+
+
+    **Authentication.** Send a workspace API key as `Authorization: Bearer `. Give each server, script or automation its own labelled key and never expose a key in browser code.
+
+
+    **Errors.** Every error is `application/problem+json` (RFC 9457), with a stable machine-readable `code` and a recovery `hint`.
+
+
+    **Compatibility.** Paths are stable and unversioned. Published operations evolve additively: existing paths, fields and documented error codes remain supported.
+
+
+    **Rate limits.** Responses carry `RateLimit-*` headers; a `429` also carries `Retry-After`.'
+  contact:
+    name: Twelfth AI developer enquiries
+    email: hello@twelfth.ai
+    url: https://twelfth.ai/developers
+servers:
+- url: https://api.twelfth.ai
+  description: Twelfth production API
+tags:
+- name: Tasks
+paths:
+  /tasks:
+    get:
+      operationId: listTasks
+      summary: List current tasks
+      description: Returns up to 100 current tasks across the workspace. A current task is open and not snoozed into the future. Tasks are ordered by due date first, then creation time; tasks without a due date follow dated tasks.
+      security:
+      - workspaceApiKey: []
+      responses:
+        '200':
+          description: The workspace's current tasks.
+          headers:
+            RateLimit-Limit:
+              description: Request quota for the current window.
+              schema:
+                type: integer
+                example: 120
+            RateLimit-Remaining:
+              description: Requests remaining in the current window.
+              schema:
+                type: integer
+                example: 119
+            RateLimit-Reset:
+              description: Seconds until the current window resets.
+              schema:
+                type: integer
+                example: 47
+            RateLimit-Policy:
+              description: The quota policy, as `<limit>;w=<window-seconds>`.
+              schema:
+                type: string
+                example: 120;w=60
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TasksResponse'
+        '401':
+          description: The workspace API key is missing, invalid or revoked.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '405':
+          description: The resource is read-only.
+          headers:
+            Allow:
+              description: Permitted methods.
+              schema:
+                type: string
+                example: GET, HEAD, OPTIONS
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '429':
+          description: Rate limit exceeded. Retry after the window resets.
+          headers:
+            RateLimit-Limit:
+              description: Request quota for the current window.
+              schema:
+                type: integer
+                example: 120
+            RateLimit-Remaining:
+              description: Requests remaining in the current window.
+              schema:
+                type: integer
+                example: 119
+            RateLimit-Reset:
+              description: Seconds until the current window resets.
+              schema:
+                type: integer
+                example: 47
+            RateLimit-Policy:
+              description: The quota policy, as `<limit>;w=<window-seconds>`.
+              schema:
+                type: string
+                example: 120;w=60
+            Retry-After:
+              description: Seconds to wait before retrying.
+              schema:
+                type: integer
+                example: 47
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+        '500':
+          description: Unexpected server error.
+          content:
+            application/problem+json:
+              schema:
+                $ref: '#/components/schemas/Problem'
+      tags:
+      - Tasks
+components:
+  schemas:
+    TasksResponse:
+      type: object
+      required:
+      - tasks
+      properties:
+        tasks:
+          type: array
+          maxItems: 100
+          items:
+            $ref: '#/components/schemas/Task'
+      additionalProperties: true
+    Task:
+      type: object
+      required:
+      - id
+      - title
+      - details
+      - dueAt
+      - bookKey
+      - assigneeName
+      - assigneeEmail
+      - sourceSessionId
+      - sourceTitle
+      - sourceSummary
+      - sourceKind
+      properties:
+        id:
+          type: string
+          description: Stable task identifier.
+          example: task_01JABCDEFGHJKMNPQRSTVWXYZ
+        title:
+          type: string
+          description: Short description of the work.
+          example: Review the Nintendo order
+        details:
+          type:
+          - string
+          - 'null'
+          description: Additional task context when available.
+        dueAt:
+          type:
+          - string
+          - 'null'
+          format: date-time
+          description: Due time in RFC 3339 format, or null when the task has no due date.
+          example: '2026-10-21T03:00:00.000Z'
+        bookKey:
+          type:
+          - string
+          - 'null'
+          description: Buying-remit key, or null for a workspace-wide task.
+          example: dept:toys
+        assigneeName:
+          type:
+          - string
+          - 'null'
+          description: Display name of the assignee, when assigned.
+          example: Sam Lee
+        assigneeEmail:
+          type:
+          - string
+          - 'null'
+          format: email
+          description: Email address of the assignee, when assigned.
+          example: sam@example.com
+        sourceSessionId:
+          type:
+          - string
+          - 'null'
+          description: Identifier of the work unit that produced the task, when applicable.
+        sourceTitle:
+          type:
+          - string
+          - 'null'
+          description: Title of the source work unit, when applicable.
+        sourceSummary:
+          type:
+          - string
+          - 'null'
+          description: Summary of the source work unit, when available.
+        sourceKind:
+          type:
+          - string
+          - 'null'
+          description: Extensible source-work-unit kind, when applicable.
+      additionalProperties: true
+    Problem:
+      type: object
+      description: A structured, machine-readable error (RFC 9457 problem detail).
+      required:
+      - type
+      - title
+      - status
+      - code
+      - detail
+      - hint
+      properties:
+        type:
+          type: string
+          format: uri-reference
+          default: about:blank
+        title:
+          type: string
+          description: Short, human-readable summary.
+        status:
+          type: integer
+          description: HTTP status code.
+          example: 401
+        code:
+          type: string
+          enum:
+          - not_found
+          - method_not_allowed
+          - rate_limited
+          - unauthorized
+          - workspace_not_found
+          - internal_error
+          description: Stable error code for programmatic handling.
+          example: unauthorized
+        detail:
+          type: string
+          description: Explanation specific to this occurrence.
+        hint:
+          type: string
+          description: How to resolve or work around the error.
+      additionalProperties: true
+  securitySchemes:
+    workspaceApiKey:
+      type: http
+      scheme: bearer
+      description: Workspace API key generated by a Twelfth workspace owner or admin.
+externalDocs:
+  description: Twelfth developer API guide
+  url: https://twelfth.ai/docs/developers/
+x-api-lifecycle:
+  versioning: Stable, unversioned URL paths. A path names a resource or capability, never a release number.
+  deprecationPolicy: Published paths, methods, fields and documented error codes remain backwards compatible. Twelfth may add optional fields, resources and operations. Deprecated contract elements remain supported; a security or legal emergency that makes continued support impossible is announced at https://twelfth.ai/developers and signalled with Deprecation and Sunset headers where practical.

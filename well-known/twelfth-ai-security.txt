@@ -1,0 +1,14 @@
+# Reporting a security issue in Twelfth
+#
+# Email the address below with enough detail to reproduce. We will
+# acknowledge, keep you updated, and credit you if you would like that.
+# Please give us a reasonable window to fix before publishing.
+#
+# Out of scope: denial of service, volumetric or automated scanning,
+# social engineering, and reports that are only the output of a scanner
+# with no demonstrated impact.
+
+Contact: mailto:privacy@twelfth.ai
+Expires: 2027-10-20T19:35:28.537Z
+Preferred-Languages: en
+Canonical: https://twelfth.ai/.well-known/security.txt

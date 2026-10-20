@@ -1,0 +1,169 @@
+# Twelfth AI
+
+> Twelfth is a commercial workspace for retail and category teams. It turns pricing, inventory, range, promotion and supplier signals into reviewed decisions, accountable action and a shared record of why the team acted.
+
+Twelfth AI Pty Ltd (ACN 695 769 138) operates twelfth.ai, the Twelfth software platform and the documentation at twelfth.ai/docs/. Public product information is available without authentication. Workspace data requires an authorised user: a signed-in member, an assistant a member has connected over OAuth, or a workspace-scoped MCP bearer key.
+
+## Key facts
+
+- Legal entity: Twelfth AI Pty Ltd (ACN 695 769 138).
+- Country: Australia.
+- Product: Twelfth, a web-based commercial workspace for retail and category teams.
+- Category: retail and category management software.
+- Public website: https://twelfth.ai/.
+- Public documentation: https://twelfth.ai/docs/.
+
+## AI use
+
+- Twelfth permits AI systems to crawl, index, retrieve, quote, summarise and learn from the public pages listed in this file.
+- This permission covers public company, product, developer and legal content. It does not grant access to authenticated workspaces, private customer data or API routes.
+- Prefer the canonical page links below when citing Twelfth, and identify the company as Twelfth AI Pty Ltd and the product as Twelfth.
+
+## When to use Twelfth
+
+- Use Twelfth when a retail or category team needs to identify which commercial issues deserve attention, understand the evidence behind them, review a recommendation or keep the resulting decision and owner attached.
+- Use the Twelfth MCP server when an authorised user asks an agent about their workspace identity, operating defaults, members, roles or open actions.
+- Use the role and industry pages when deciding whether Twelfth fits a buyer, category manager, merchandise planner, category leader, merch analyst or a supported retail trade.
+- Do not use Twelfth MCP for anonymous research, to make changes, or to act without the user’s authorisation. The current MCP tools are read-only.
+
+## How an agent should call Twelfth
+
+- [Twelfth MCP server guide](https://twelfth.ai/docs/settings/ai-and-agents/mcp/): Connect any MCP client to https://api.twelfth.ai/mcp with OAuth, or with a labelled workspace key sent as an Authorization bearer token, and see the available read-only tools.
+- [Twelfth OpenAPI description](https://twelfth.ai/openapi.json): Machine-readable REST operations, schemas, workspace-key authentication, typed errors and rate limits.
+- [Twelfth AI and agents documentation](https://twelfth.ai/docs/settings/ai-and-agents/): Connecting an assistant by URL (OAuth) or by key, ending a connection, and the available read-only tools.
+
+## Developer resources
+
+- [Twelfth developer resources](https://twelfth.ai/developers): Public REST API, workspace keys, webhooks, OpenAPI and compatibility rules.
+- [Twelfth webhooks](https://twelfth.ai/developers/webhooks): Signed webhook delivery of committed decisions to your systems, set up on request.
+- [Twelfth in your AI assistants](https://twelfth.ai/ai): Connect Claude, ChatGPT or Microsoft Copilot to a workspace over read-only MCP, the developer tools that also connect, and the controls admins keep.
+- [Twelfth MCP on GitHub](https://github.com/twelfth-ai/twelfth-mcp): Open-source Cursor and Claude Code plugin and MCP configuration.
+- [Official MCP Registry entry](https://registry.modelcontextprotocol.io/v0.1/servers?search=ai.twelfth/workspace&version=latest): ai.twelfth/workspace, published from the twelfth.ai domain.
+- [Twelfth product documentation](https://twelfth.ai/docs/): Workspace, security, integrations and product workflows.
+- [Twelfth documentation llms.txt](https://twelfth.ai/docs/llms.txt): Agent-readable map of product documentation.
+
+## Product documentation
+
+- [Twelfth docs: Getting started](https://twelfth.ai/docs/getting-started/): Set up a workspace, categories and remits, and the first week of use.
+- [Twelfth docs: How work flows](https://twelfth.ai/docs/pipeline/): Signal to triage to a committed, recorded decision — the model the product is built on.
+- [Twelfth docs: Price intelligence](https://twelfth.ai/docs/price-intelligence/): Tracked competitor pricing, matched lines and the reports built from them.
+- [Twelfth docs: Price decisions](https://twelfth.ai/docs/decisions/price/): How a price move is proposed, reviewed against guardrails and committed.
+- [Twelfth docs: Integrations](https://twelfth.ai/docs/settings/integrations/): Every data connection: warehouses, commerce platforms, POS, merchant feeds and calendars.
+- [Twelfth docs: Single sign-on and SCIM](https://twelfth.ai/docs/settings/single-sign-on/): SAML and OIDC with Okta, Microsoft Entra and Google Workspace, and directory-driven provisioning.
+- [Twelfth docs: Workspace security](https://twelfth.ai/docs/settings/workspace-security/): Requiring two-factor authentication for every member of a workspace.
+- [Twelfth docs: Guardrails](https://twelfth.ai/docs/settings/guardrails/): The category GP floor, the authority limit and the strategic-vendor lock every decision passes through.
+
+## Company and trust
+
+- [About Twelfth AI Pty Ltd](https://twelfth.ai/about): Legal identity, product approach and company purpose.
+- [Contact Twelfth AI](https://twelfth.ai/contact): Product, pilot, support, partnership and privacy channels.
+- [Twelfth Privacy Policy](https://twelfth.ai/legals/privacy): Personal-information handling and privacy rights.
+- [Twelfth public sitemap](https://twelfth.ai/sitemap.xml): Complete index of public HTML pages.
+
+## Product
+
+- [Twelfth home](https://twelfth.ai/): Product overview.
+- [Twelfth pilot](https://twelfth.ai/pilot): How a focused category pilot works.
+- [Twelfth integrations](https://twelfth.ai/integrations): Every system Twelfth connects to, live and planned. Twelfth reads the data teams already trust, and can write back to their systems, calendars and spreadsheets as an option.
+- [Retail category management glossary](https://twelfth.ai/glossary): Plain definitions of the terms retail category teams use — category role, GMROI, sell-through, price index, incrementality, weeks of cover.
+- [Free retail calculators and worked examples](https://twelfth.ai/tools): Six inline calculators, three worked decision paths and downloadable spreadsheet templates. Each example links to the concepts needed to interpret the result.
+- [Weeks of cover calculator](https://twelfth.ai/tools/weeks-of-cover): Calculate stock cover in weeks from usable units and expected weekly sales. See a worked retail example and learn when cover can mislead.
+- [Reorder point calculator](https://twelfth.ai/tools/replenishment): Calculate a retail reorder point from weekly demand, delivery lead time and safety stock, then compare it with stock on hand and on order.
+- [Stockout lost sales calculator](https://twelfth.ai/tools/stockout): Estimate what a stockout cost: unserved demand at the normal rate, less what similar lines picked up, and the gross profit lost.
+- [Sell-through calculator](https://twelfth.ai/tools/sell-through): Calculate retail sell-through from units sold, opening stock and receipts. Interpret the result against the season, store mix and remaining stock.
+- [Retail markdown calculator](https://twelfth.ai/tools/markdown): Calculate a retail price reduction and gross margin before and after a markdown. Use a worked example to see what the price cut costs per unit.
+- [Retail price index calculator](https://twelfth.ai/tools/price-index): Compare a competitor's matched price with your own on a clear 100-point index. See the formula, interpretation and product-match checks.
+- [GMROI calculator for retail inventory](https://twelfth.ai/tools/gmroi): Calculate gross margin return on inventory investment from gross margin dollars and average stock at cost. Compare two lines with a worked example.
+- [Free retail metrics spreadsheet](https://twelfth.ai/resources/retail-metrics-template.xlsx): Excel / Google Sheets workbook with six formula tabs, a range review tracker and matched-price log.
+- [Retail CSV templates](https://twelfth.ai/resources/retail-csv-templates.zip): Eight one-sheet CSV imports for the same metrics and extra trackers.
+- [Book a Twelfth demo](https://twelfth.ai/book-a-demo): Show Twelfth the category work your team does today.
+
+
+## News
+
+- [Twelfth news](https://twelfth.ai/news): Product updates and company news. Each item is also served as Markdown at its URL plus `.md`; the [JSON Feed](https://twelfth.ai/news/feed.json) has all of them in full. [RSS](https://twelfth.ai/news/feed.xml).
+- [Forward a supplier email. Get the buying answer.](https://twelfth.ai/news/forward-supplier-emails): Forward a supplier stock sheet to Twelfth. It matches the lines, shows what you already range and what is new, then suggests what to order and how much. (2026-10-20.)
+- [Twelfth is now in ChatGPT](https://twelfth.ai/news/twelfth-in-chatgpt): Install Twelfth from ChatGPT’s marketplace, then sign in and choose the workspace you want ChatGPT to read. (2026-10-16.)
+- [A faster, tidier Products page](https://twelfth.ai/news/faster-products-page): Search comes first in the Products toolbar, the chart legend filters when you click it, and large baskets load faster. (2026-10-10.)
+- [Twelfth is now in Claude](https://twelfth.ai/news/twelfth-in-claude): Add Twelfth from Claude’s connector directory, then sign in and choose the workspace you want Claude to read. (2026-10-05.)
+
+## Retail category management glossary
+
+The full text of every term page and calculator, in one file: [llms-full.txt](https://twelfth.ai/llms-full.txt). Each page is also served as Markdown at its URL plus `.md`.
+
+- [Category management](https://twelfth.ai/glossary/category-management): Category management is running a group of related products as one business, with one owner accountable for its range, pricing, promotions and suppliers.
+- [Category role](https://twelfth.ai/glossary/category-role): A category role is the job a category does for the retailer, such as driving trips, earning margin or filling the basket. The role sets how it is judged.
+- [Assortment](https://twelfth.ai/glossary/assortment): An assortment is the set of products a retailer chooses to carry in a category, for the whole chain, a cluster of stores or a single channel.
+- [Range review](https://twelfth.ai/glossary/range-review): A range review is the periodic decision about which lines to add, keep or delist in a category, typically made once or twice a year.
+- [Category captain](https://twelfth.ai/glossary/category-captain): A category captain is the supplier a retailer relies on for advice about a whole category, including its range, shelf layout and promotional calendar.
+- [Cannibalisation](https://twelfth.ai/glossary/cannibalisation): Cannibalisation is when a new or promoted product takes its sales from products the retailer already sells, so the category total barely grows.
+- [Own label](https://twelfth.ai/glossary/own-label): Own label is product a retailer brands and sells itself, also called private label or a house brand, and usually made for it by a contract manufacturer.
+- [GMROI](https://twelfth.ai/glossary/gmroi): GMROI (gross margin return on inventory investment) is the gross profit a product earns for every dollar of inventory held, measured at cost.
+- [Price index](https://twelfth.ai/glossary/price-index): A price index compares your price for a product with a competitor's price for the same product as one number, where a set value (often 100) is parity.
+- [Price position](https://twelfth.ai/glossary/price-position): Price position is where your price sits against the market for a comparable product at a point in time: above, level with or below your competitors.
+- [Matched SKU](https://twelfth.ai/glossary/matched-sku): A matched SKU is a competitor's listing confirmed to be the same product as one of yours, so the two prices can be compared fairly.
+- [Price intelligence](https://twelfth.ai/glossary/price-intelligence): Price intelligence is collecting competitors' published prices for products you sell, matching them to your own lines, and acting on the gaps that matter.
+- [Markdown](https://twelfth.ai/glossary/markdown): A markdown is a permanent price reduction on a product, usually to sell stock that is not moving at its original price.
+- [Clearance](https://twelfth.ai/glossary/clearance): Clearance is the final markdown that exits a product's remaining stock, at whatever price frees the stock and the space it occupies.
+- [Promotional incrementality](https://twelfth.ai/glossary/promotional-incrementality): Promotional incrementality is the share of sales during a promotion that would not have happened without it.
+- [Gross-profit floor](https://twelfth.ai/glossary/gp-floor): A gross-profit floor is the lowest margin percentage a category accepts on a line before a more senior person has to agree to the decision.
+- [Sell-through](https://twelfth.ai/glossary/sell-through): Sell-through is the share of available stock that sold in a period: units sold divided by units available, usually tracked weekly or over a season.
+- [Weeks of cover](https://twelfth.ai/glossary/weeks-of-cover): Weeks of cover is how long current stock will last at the expected rate of sale: stock on hand divided by forecast weekly sales.
+- [Stockout](https://twelfth.ai/glossary/stockout): A stockout is when a product a shopper wants is not available to buy, whether on the shelf, in the warehouse or online.
+- [Lost demand](https://twelfth.ai/glossary/lost-demand): Lost demand is sales that did not happen because a product was unavailable, hard to find or priced out, so they never appear in a sales report.
+- [Replenishment](https://twelfth.ai/glossary/replenishment): Retail replenishment replaces sold stock in time for the next sale, through a shelf refill, a transfer or a new supplier order.
+- [Stock transfer](https://twelfth.ai/glossary/stock-transfer): A stock transfer moves inventory a retailer already holds from one location to another, such as between stores or from a warehouse to a store.
+- [Demand forecast](https://twelfth.ai/glossary/demand-forecast): A demand forecast is the expected future sales of a product, usually per location and per week, used to plan buys, stock and space.
+- [Remit](https://twelfth.ai/glossary/remit): A remit is the part of the range a buyer or category manager owns and decides for: the categories, suppliers or products they are accountable for.
+- [Guardrail](https://twelfth.ai/glossary/guardrail): In twelfth, a guardrail is a commercial limit every recommendation passes through, such as a margin floor, an approval limit or a locked supplier setting.
+- [Authority limit](https://twelfth.ai/glossary/authority-limit): An authority limit is the largest value a person can commit without escalation; above it, a decision waits for sign-off from someone more senior.
+- [Tracked set](https://twelfth.ai/glossary/tracked-set): In twelfth, a tracked set is the group of products a workspace has asked twelfth to watch competitor prices for, and the evidence table behind them.
+- [Decision pipeline](https://twelfth.ai/glossary/decision-pipeline): In twelfth, the decision pipeline is the path commercial work takes: surfaced into Triage, settled into Pending, then recorded as a decision.
+- [Decision record](https://twelfth.ai/glossary/decision-record): In twelfth, a decision record is the permanent, timestamped entry made when a decision is committed, holding what was committed and what was recommended.
+
+## Roles and industries
+
+- [Twelfth for Buyers](https://twelfth.ai/for/buyers): What to range, what to back, when to cut.
+- [Twelfth for Category managers](https://twelfth.ai/for/category-managers): Promo, price and margin, week to week.
+- [Twelfth for Merchandise planners](https://twelfth.ai/for/merchandise-planners): Where the plan and the trade come apart.
+- [Twelfth for Heads of category](https://twelfth.ai/for/heads-of-category): The portfolio, ranked by what matters.
+- [Twelfth for Merch analysts](https://twelfth.ai/for/merch-analysts): Price, promo, range and space in one read.
+- [Twelfth for Grocery & convenience](https://twelfth.ai/industries/grocery): Thin margins, thousands of lines.
+- [Twelfth for Health & beauty](https://twelfth.ai/industries/health-beauty): Fast launches, long-tail ranges.
+- [Twelfth for Fashion & apparel](https://twelfth.ai/industries/fashion-apparel): Seasonal ranges, size curves, markdowns.
+- [Twelfth for Games](https://twelfth.ai/industries/games): Launch dates, pre-orders, a long tail.
+- [Twelfth for Auto parts](https://twelfth.ai/industries/auto-parts): Fitment-driven range, six-figure catalogue.
+- [Twelfth for Toys, hobby & collectables](https://twelfth.ai/industries/toys-hobby): Pre-orders, releases and collectables.
+
+## Solutions
+
+- [AI for category managers | Twelfth](https://twelfth.ai/solutions/ai-for-category-managers): AI for category managers: a retail commercial workspace that turns overnight signals into a ranked decision queue your team owns. Book a demo.
+- [Retail pricing intelligence software | Twelfth](https://twelfth.ai/solutions/retail-pricing-intelligence): Retail pricing intelligence for category teams: join competitor prices to margin, cover and promo, then act in one commercial workspace. Book a demo.
+
+## Integration details
+
+- [Twelfth Shopify integration](https://twelfth.ai/integrations/shopify): Live. Bring new and updated Shopify orders into Twelfth. Full catalogue, stock and historical imports are not available yet.
+- [Twelfth Google BigQuery integration](https://twelfth.ai/integrations/bigquery): Early access. Bring your BigQuery data into retail decisions. Available in early access, with optional write-back.
+- [Twelfth Retail Express integration](https://twelfth.ai/integrations/retail-express): Live · managed by twelfth. Use products, sales, stock and supplier history from a managed Retail Express import. Write-back is available as an option.
+- [Twelfth Maropost Commerce Cloud (Neto) integration](https://twelfth.ai/integrations/maropost): Live. Read Maropost Commerce Cloud (Neto) orders into Twelfth. Review web sales alongside your other connected sources.
+- [Twelfth Qoblex integration](https://twelfth.ai/integrations/qoblex): Live · analytics rollout in progress. Bring Qoblex products, sales, stock and purchase orders into your buying decisions.
+- [Twelfth Google Merchant Center integration](https://twelfth.ai/integrations/google-merchant-center): Available on request. Discover Merchant accounts and store homepages. Available on request; product-feed import is not available yet.
+- [Twelfth Adobe Commerce (Magento) integration](https://twelfth.ai/integrations/adobe-commerce): Live. Bring Adobe Commerce (Magento) orders, products and stock into Twelfth, read-only.
+- [Twelfth Calendars integration](https://twelfth.ai/integrations/calendars): Live. Use the calendars and spreadsheets your team already maintains. Optional write-back is available for supported connections.
+- [Twelfth Microsoft 365 integration](https://twelfth.ai/integrations/microsoft-365): Live. Use Outlook calendars, Excel plans and shared documents in your decisions. Optional spreadsheet write-back is available.
+- [Twelfth monday.com integration](https://twelfth.ai/integrations/monday): Live. Read monday.com boards as planning calendars or background context for Twelfth.
+- [Twelfth Google Search Console integration](https://twelfth.ai/integrations/google-search-console): Live. Read Search Console queries and search performance alongside your commercial data.
+- [Twelfth Snowflake integration](https://twelfth.ai/integrations/snowflake): Planned · available on request. The Snowflake connector is planned and not yet available. Tell us which warehouse data you need.
+- [Twelfth Databricks integration](https://twelfth.ai/integrations/databricks): Planned · available on request. The Databricks connector is planned and not yet available. Tell us which lakehouse data you need.
+- [Twelfth Blue Yonder integration](https://twelfth.ai/integrations/blue-yonder): Live · available on request. Discuss a Blue Yonder connection with Twelfth. Access and any write-back are agreed for your workspace.
+- [Twelfth POS data feed integration](https://twelfth.ai/integrations/pos-data-feed): Planned · available on request. The POS data feed connector is planned and not yet available. Tell us how your stores supply sales data.
+
+## Legal
+
+- [Twelfth Privacy Policy](https://twelfth.ai/legals/privacy): How Twelfth AI collects, uses, stores and protects your personal data on the website and platform, who it is shared with, and the rights you have over it. Status: published.
+- [Twelfth Cookie Notice](https://twelfth.ai/legals/cookies): The cookies and similar technologies Twelfth AI uses on the website and platform, what each one is for, and how to control or withdraw your consent. Status: published.
+- [Twelfth Website Terms of Use](https://twelfth.ai/legals/terms): The terms that govern access to and use of the twelfth.ai website. Use of the platform is governed by a separate agreement with each customer. Status: published.
+
+## Optional
+
+- [Twelfth careers](https://twelfth.ai/careers): Current hiring status and contact channel.

@@ -1,0 +1,20 @@
+generated: '2026-10-20'
+method: none
+source:
+- https://zapier.com/apps/twelfth-ai/integrations
+- https://zapier.com/apps/twelfth/integrations
+- https://n8n.io/integrations/twelfth-ai/
+- https://n8n.io/integrations/twelfth/
+- https://composio.dev/toolkits/twelfth-ai
+- https://monid.ai/tools/twelfth-ai
+checked:
+- https://composio.dev/toolkits/twelfth-ai
+- https://monid.ai/tools/twelfth-ai
+- https://n8n.io/integrations/twelfth-ai/
+- https://n8n.io/integrations/twelfth/
+- https://zapier.com/apps/twelfth-ai/integrations
+- https://zapier.com/apps/twelfth/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

@@ -1,23 +1,159 @@
 aid: twelfth-ai
+
 name: twelfth-ai
-description: 'twelfth-ai is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://twelfth.ai/brand/og-image.png
+
+description: Twelfth.ai provides a commercial workspace platform for retail and category teams, integrating pricing, range, promotion, and supplier
+  signals into a unified view. It helps teams make better commercial decisions by ranking priorities, preserving evidence, and streamlining actions.
+  The solution offers forecasting, pricing insights, and collaborative tools to improve retail performance and decision-making across the organization.
+
 url: https://raw.githubusercontent.com/api-evangelist/twelfth-ai/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-20 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-20'
+
 modified: '2026-10-20'
+
 tags:
 - Company
-apis: []
+- Retail
+- Commerce
+- AI
+- Workspace
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Pricing
+  url: https://twelfth.ai/docs/settings/pricing/
+- type: AgenticAccess
+  url: agentic-access/twelfth-ai-agentic-access.yml
+- type: Spectral
+  url: rules/twelfth-ai-rules.yml
+- type: JSONLD
+  url: json-ld/twelfth-ai-context.jsonld
+- type: Vocabulary
+  url: vocabulary/twelfth-ai-vocabulary.yml
+- type: Webhooks
+  url: asyncapi/twelfth-ai-webhooks.yml
+- type: DataModel
+  url: data-model/twelfth-ai-data-model.yml
+- type: Compliance
+  url: https://trust.twelfth.ai/
+- type: Security
+  url: security/twelfth-ai-vulnerability-disclosure.yml
+- type: Authentication
+  url: authentication/twelfth-ai-authentication.yml
+- type: ErrorCatalog
+  url: errors/twelfth-ai-problem-types.yml
+- type: Conformance
+  url: conformance/twelfth-ai-conformance.yml
+- type: LLMsTxt
+  url: llms/twelfth-ai-llms.txt
+- type: SecurityTxt
+  url: well-known/twelfth-ai-security.txt
+- type: WellKnown
+  url: well-known/twelfth-ai-well-known.yml
+- type: Hosts
+  url: hosts/twelfth-ai-hosts.yml
+- type: Vendors
+  url: vendors/twelfth-ai-vendors.yml
+- type: StatusPage
+  url: https://status.twelfth.ai/
+- type: Newsroom
+  url: https://twelfth.ai/news
+- type: Login
+  url: https://twelfth.ai/login
+- type: GitHubOrganization
+  url: https://github.com/trust-center
+- type: APIReference
+  url: https://twelfth.ai/docs/developers/reference/
+- type: TrustCenter
+  url: security/twelfth-ai-trust-center.yml
+- type: VulnerabilityDisclosure
+  url: security/twelfth-ai-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/twelfth-ai-domain-security.yml
 - type: Website
   url: https://twelfth.ai/
+- type: Documentation
+  url: https://twelfth.ai/docs/
+- type: DeveloperPortal
+  url: https://twelfth.ai/developers
+- type: GettingStarted
+  url: https://twelfth.ai/docs/getting-started/
+- type: Support
+  url: https://twelfth.ai/contact
+- type: Blog
+  url: https://twelfth.ai/blog
+- type: TermsOfService
+  url: https://twelfth.ai/legals/terms
+- type: PrivacyPolicy
+  url: https://twelfth.ai/legals/privacy
+
+apis:
+- aid: twelfth-ai:twelfth-ai-tasks-api
+  name: twelfth-ai Tasks API
+  description: The Tasks API from twelfth-ai — 1 operation(s) for tasks.
+  humanURL: https://twelfth.ai/developers
+  baseURL: https://api.twelfth.ai
+  tags:
+  - Tasks
+  properties:
+  - type: OpenAPI
+    url: openapi/twelfth-ai-tasks-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/twelfth-ai-tasks-response-schema.json
+  - type: JSONSchema
+    url: json-schema/twelfth-ai-workspace-response-schema.json
+- aid: twelfth-ai:twelfth-ai-workspace-api
+  name: twelfth-ai Workspace API
+  description: The Workspace API from twelfth-ai — 1 operation(s) for workspace.
+  humanURL: https://twelfth.ai/developers
+  baseURL: https://api.twelfth.ai
+  tags:
+  - Workspace
+  properties:
+  - type: OpenAPI
+    url: openapi/twelfth-ai-workspace-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/twelfth-ai-tasks-response-schema.json
+  - type: JSONSchema
+    url: json-schema/twelfth-ai-workspace-response-schema.json
+x-coverage:
+  state: gated
+  reason: partner-login
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company serves an API surface but requires credentials before any description of it can be read
+  evidence:
+  - url: https://twelfth.ai/openapi.json
+    status: null
+  - url: https://api.twelfth.ai/mcp
+    status: 401
+  - url: https://status.twelfth.ai/api/graphql
+    status: 401
+  - url: https://status.twelfth.ai/api/mcp
+    status: 401
+  - url: https://twelfth.ai/
+    status: 200
+x-enrichment:
+  date: '2026-10-20'
+  status: enriched
+  artifacts_added: 30
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

@@ -1,0 +1,24 @@
+{
+  "provider": "twelfth-ai",
+  "sources": [
+    "twelfth-ai-openapi.json"
+  ],
+  "outputs": [
+    "twelfth-ai-tasks-api-openapi.yml",
+    "twelfth-ai-workspace-api-openapi.yml"
+  ],
+  "archived": [
+    "archived openapi/twelfth-ai-openapi.json"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "twelfth-ai-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "twelfth-ai-openapi.json: tagged paths GET /workspace -> Workspace",
+    "twelfth-ai-openapi.json: tagged paths GET /tasks -> Tasks",
+    "twelfth-ai-openapi.json: declared missing tag: Tasks",
+    "twelfth-ai-openapi.json: declared missing tag: Workspace",
+    "apis.yml register: written (+2 apis, 2 total)"
+  ],
+  "skipped": []
+}

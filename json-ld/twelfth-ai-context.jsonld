@@ -1,0 +1,113 @@
+{
+  "@context": {
+    "@vocab": "https://twelfth.ai/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "twelfth": "https://twelfth.ai/schema#",
+    "WorkspaceResponse": "twelfth:WorkspaceResponse",
+    "workspace": {
+      "@id": "twelfth:workspace",
+      "@type": "@id"
+    },
+    "Workspace": "twelfth:Workspace",
+    "id": {
+      "@id": "twelfth:id",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "twelfth:name",
+      "@type": "xsd:string"
+    },
+    "slug": {
+      "@id": "twelfth:slug",
+      "@type": "xsd:string"
+    },
+    "timezone": {
+      "@id": "twelfth:timezone",
+      "@type": "xsd:string"
+    },
+    "currencyCode": {
+      "@id": "twelfth:currencyCode",
+      "@type": "xsd:string"
+    },
+    "countryCode": {
+      "@id": "twelfth:countryCode",
+      "@type": "xsd:string"
+    },
+    "TasksResponse": "twelfth:TasksResponse",
+    "tasks": {
+      "@id": "twelfth:tasks",
+      "@container": "@list"
+    },
+    "Task": "twelfth:Task",
+    "title": {
+      "@id": "twelfth:title",
+      "@type": "xsd:string"
+    },
+    "details": {
+      "@id": "twelfth:details",
+      "@type": "xsd:string"
+    },
+    "dueAt": {
+      "@id": "twelfth:dueAt",
+      "@type": "xsd:dateTime"
+    },
+    "bookKey": {
+      "@id": "twelfth:bookKey",
+      "@type": "xsd:string"
+    },
+    "assigneeName": {
+      "@id": "twelfth:assigneeName",
+      "@type": "xsd:string"
+    },
+    "assigneeEmail": {
+      "@id": "twelfth:assigneeEmail",
+      "@type": "xsd:string"
+    },
+    "sourceSessionId": {
+      "@id": "twelfth:sourceSessionId",
+      "@type": "xsd:string"
+    },
+    "sourceTitle": {
+      "@id": "twelfth:sourceTitle",
+      "@type": "xsd:string"
+    },
+    "sourceSummary": {
+      "@id": "twelfth:sourceSummary",
+      "@type": "xsd:string"
+    },
+    "sourceKind": {
+      "@id": "twelfth:sourceKind",
+      "@type": "xsd:string"
+    },
+    "Problem": "twelfth:Problem",
+    "type": {
+      "@id": "twelfth:type",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "twelfth:status",
+      "@type": "xsd:integer"
+    },
+    "code": {
+      "@id": "twelfth:code",
+      "@type": "xsd:string"
+    },
+    "detail": {
+      "@id": "twelfth:detail",
+      "@type": "xsd:string"
+    },
+    "hint": {
+      "@id": "twelfth:hint",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "twelfth-ai API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects twelfth-ai's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-20) from openapi/twelfth-ai-openapi.json.",
+  "dcterms:created": "2026-10-20",
+  "dcterms:source": [
+    "openapi/twelfth-ai-openapi.json"
+  ]
+}

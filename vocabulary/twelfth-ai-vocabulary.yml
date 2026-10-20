@@ -1,0 +1,36 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/twelfth-ai-openapi.json
+vocabulary:
+  name: twelfth-ai Domain Vocabulary
+  description: 'Terms declared by twelfth-ai''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-10-20'
+  terms:
+  - term: WorkspaceResponse
+    definition: 'Object declared by the contract with fields: workspace.'
+    tags:
+    - Object
+    source: openapi/twelfth-ai-openapi.json#/components/schemas/WorkspaceResponse
+  - term: Workspace
+    definition: 'Object declared by the contract with fields: id, name, slug, timezone, currencyCode, countryCode.'
+    tags:
+    - Object
+    source: openapi/twelfth-ai-openapi.json#/components/schemas/Workspace
+  - term: TasksResponse
+    definition: 'Object declared by the contract with fields: tasks.'
+    tags:
+    - Object
+    source: openapi/twelfth-ai-openapi.json#/components/schemas/TasksResponse
+  - term: Task
+    definition: 'Object declared by the contract with fields: id, title, details, dueAt, bookKey, assigneeName, assigneeEmail, sourceSessionId,
+      sourceTitle, sourceSummary, sourceKind.'
+    tags:
+    - Object
+    source: openapi/twelfth-ai-openapi.json#/components/schemas/Task
+  - term: Problem
+    definition: A structured, machine-readable error (RFC 9457 problem detail).
+    tags:
+    - Object
+    source: openapi/twelfth-ai-openapi.json#/components/schemas/Problem

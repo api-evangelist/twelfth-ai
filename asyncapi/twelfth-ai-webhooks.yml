@@ -1,0 +1,26 @@
+generated: '2026-10-20'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://twelfth.ai/developers/webhooks
+sources:
+- https://twelfth.ai/developers/webhooks
+- https://twelfth.ai/docs/settings/integrations/destinations/webhooks
+- https://twelfth.ai/docs/settings/notifications
+- https://twelfth.ai/docs/settings/ai-and-agents/mcp-events
+description: Twelfth provides webhook delivery for MCP events.
+events:
+- event: recommendation.created
+  description: Fires when the morning’s data lands new recommendations such as reorders, price moves, or range calls.
+- event: competitor_price.changed
+  description: Fires when price tracking first spots a competitor cut, a stockout, a retailer following another, or the market index crossing
+    yours.
+- event: project.updated
+  description: Fires when a project is created, closed, reopened, or its supplier order is finalised.
+- event: data.refreshed
+  description: Fires when a new day of sales, stock and supplier data is in, making earlier figures out of date.
+delivery:
+  signature: Signed with Standard Webhooks using headers webhook-id, webhook-signature, webhook-timestamp and X-MCP-Subscription-Id; secret is
+    a whsec_ value (base64 of 24–64 random bytes).
+  retries: If a delivery fails (non‑2xx), Twelfth retries after 1 minute, 5 minutes, 30 minutes, 2 hours and 6 hours, then gives up. 410 and 413
+    responses are never retried; redirects are never followed.
+docs: https://twelfth.ai/developers/webhooks

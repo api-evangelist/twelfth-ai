@@ -1,0 +1,48 @@
+generated: '2026-10-20'
+method: derived
+generator: derive-problem-types.py
+source:
+- openapi/twelfth-ai-openapi.json
+format: rfc9457
+envelope:
+  media_type: application/problem+json
+  schema: Problem
+coverage:
+  operations: 2
+  statuses_declared: 5
+problems:
+- status: 401
+  title: Unauthorized
+  description: The workspace API key is missing, invalid or revoked.
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: Problem
+- status: 404
+  title: Not Found
+  description: The key no longer refers to an available workspace.
+  operations: 1
+  media_types:
+  - application/problem+json
+  schema: Problem
+- status: 405
+  title: Method Not Allowed
+  description: The resource is read-only.
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: Problem
+- status: 429
+  title: Too Many Requests
+  description: Rate limit exceeded. Retry after the window resets.
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: Problem
+- status: 500
+  title: Internal Server Error
+  description: Unexpected server error.
+  operations: 2
+  media_types:
+  - application/problem+json
+  schema: Problem
